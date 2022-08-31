@@ -2,14 +2,14 @@ const { Schema, model } = require (`mongoose`)
 
 const UserSchema = new Schema (
     {
-    UserName:{
+    userName:{
         type: String,
         unique: true,
         required: true,
-        tirm: true
+        trim: true
     },
-    Email:{
-        Type: String,
+    email:{
+        type: String,
         unique: true,
         required: true,
         validate:{
@@ -18,10 +18,10 @@ const UserSchema = new Schema (
         },
     },
      //Array of _id values referencing the Thought model
-    Thoughts: [
+    thoughts: [
         {
             type: Schema.Types.ObjectId,
-            ref: 'Thought'
+            ref: 'Thought' //to connect thougt model ln40
         }
     ],
     //Array of _id values referencing the User model (self-reference)
@@ -45,8 +45,6 @@ const UserSchema = new Schema (
 UserSchema.virtual('friendCount').get(function(){
     return this.friends.length;
 })
-
-
 
 const User =model ('User', UserSchema);
 
