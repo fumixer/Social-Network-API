@@ -20,13 +20,14 @@ const ReactionSchema = new Schema({
     createdAt: {
         type: Date,
         default: Date.now,
-        get: creaedAtVal => dateFormat(createdAtVal)
+        get: createdAtVal => dateFormat(createdAtVal)
     }
 },
     {
         toJSON: {
             getters: true
         },
+        // prevents virtuals from creating duplicate of _id as `id`
         id:false,
     }
 );

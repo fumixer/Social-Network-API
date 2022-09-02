@@ -4,10 +4,10 @@ This is a MongoDB and mongoose based social network application.
 
 ### Github : https://github.com/fumixer/Social-Network-API
 
-### Workthrough video : 
+### Workthrough video : https://drive.google.com/drive/folders/1VWMgPmmJ_7HE-4OEtZIsYdhg8UHi3Eow?usp=sharing
 
 ### Screenshot
-![GetAllUsers](./assets/)
+![User route](./assets/users.gif)
 ![PostUsers](./assets/)
 
 ### Technologies
