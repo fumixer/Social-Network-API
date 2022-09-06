@@ -12,18 +12,13 @@ const UserSchema = new Schema (
         type: String,
         unique: true,
         required: true,
-          // use REGEX to validate correct email
           match: [/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/]
-        // validate:{
-        //     validator:() =>Promise.resolve(false),
-        //     message: 'Email validation failed'
-        // },
     },
      //Array of _id values referencing the Thought model
-    thoughts: [
+     thoughtText: [
         {
             type: Schema.Types.ObjectId,
-            ref: 'Thought' //to connect thougt model ln40
+            ref: 'Thought' //to connect thought model ln40
         }
     ],
     //Array of _id values referencing the User model (self-reference)
@@ -32,11 +27,12 @@ const UserSchema = new Schema (
           type: Schema.Types.ObjectId,
           ref: 'User',
         },
-      ],
+      ]
     },
       {
         toJSON: {
-          virtuals: true,
+          getters: true,
+          virtuals: true
         },
         id: false,
       },

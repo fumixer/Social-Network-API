@@ -24,7 +24,7 @@ const userController = {
   //get one user by id
   getUserById({ params }, res) {
     User.findOne({ _id: params.id })
-      .populate('thoughts')// connected to user model thougts ln21
+      .populate('thoughtText')// connected to user model thoughts ln21
       .populate('friends')
       .select('-__v')
       .then(dbUserData => res.json(dbUserData))
@@ -60,11 +60,10 @@ const userController = {
 
       })
       .then(() => {
-        res.json({ message: 'The user and thougts were deleted' })
+        res.json({ message: 'The user and thoughts were deleted' })
       })
       .catch(err => res.json(err));
   },
-
 
   //add friend
   addFriend({ params, body }, res) {
