@@ -4,14 +4,14 @@ This is a API for social network made with MongoDB and mongoose.
 
 ### Github : https://github.com/fumixer/Social-Network-API
 
-### Workthrough video : https://drive.google.com/drive/folders/1VWMgPmmJ_7HE-4OEtZIsYdhg8UHi3Eow?usp=sharing
+### Work through video : https://drive.google.com/file/d/1gw_RUcN5193EuymrFVIrDL0ctg2_RsKP/view?usp=sharing
 
 ### Screenshot
 *User route
-![User route](./assets/users.gif)
+![User route](./assets/User.png)
 
-*Thougt route
-![PostUsers](./assets/)
+*Thought route
+![Thought route](./assets/Thought.png)
 
 ### Technologies
 
@@ -21,4 +21,4 @@ This is a API for social network made with MongoDB and mongoose.
 * npm
 * express
 
-![licence badge](https://img.shields.io/badge/license-MIT-orange.png)
+![license badge](https://img.shields.io/badge/license-MIT-orange.png)
